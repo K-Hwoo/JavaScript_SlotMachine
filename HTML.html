@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <title>App</title>
+</head>
+<body>
+    <div class="container_NOTBOOT" id="ceil_opt">
+        <span class="box0_l" style="font-size: 25px;"><b>Vanilla Slot Machine</b></span>
+        <div class="box0_r" id="weather">
+            <span>날씨정보 로딩중..</span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <div class = "container_NOTBOOT" id="top_opt">
+        <div class="box1">
+            <form class="hidden" id="login-form">    <!-- HTML의 도움을 받기위해 input은 form 안에 -->
+                <input required maxlength = "15" type="text" placeholder="What is your name?">
+                <button>Log In</button>
+            </form>
+            <h3 class="hidden" id="greeting"></h3>
+        </div>
+
+        <div class="box1">
+            <h2 id="clock"></h2>
+        </div>
+
+        <div class="box1">
+            <a href="www.google.com"><img src="img/google.png"></a>
+            <a href="www.naver.com"><img src="img/naver.png"></a>
+            <a href="www.youtube.com"><img src="img/youtube.png"></a>
+        </div>
+    </div>
+    
+
+    <div class = "container_NOTBOOT" id="image_opt">
+        <div class="box2">
+            <img class="img-thumbnail" id="slot_image1" src="img/IMG_3.jpg">
+        </div>
+        
+        <div class="box2">
+            <img class="img-thumbnail" id="slot_image2" src="img/IMG_4.jpg">
+        </div>
+
+        <div class="box2">
+            <img class="img-thumbnail" id="slot_image3" src="img/IMG_5.jpg">
+        </div>
+    </div>
+
+
+    <div class = "container_NOTBOOT" id="info_opt">
+        <div class="box3">
+            <h3>보유 포인트</h3>
+            <br>
+            <h4 id="points"></h4>
+        </div>
+
+        <div class="box3">
+            <form id="beting">
+                <input type="number" min="0" step="10" placeholder="베팅 포인트를 입력">
+                <br>
+                <button class=" btn btn-success btn-lg">슬롯!</button>
+            </form>
+            <p>같은 이미지가 2개 나오면 3배</p>
+            <p>모두 같은 이미지가 나오면 10배</p>
+            <p>7이 2개 나오면 5배</p>
+            <p>! 777은 100배 !</p>
+        </div>
+
+        <div class="box3" id="memo">
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press">
+            </form>
+            <ul id="todo-list">
+            </ul>
+        </div>
+    </div>
+
+
+    <div class = "container_NOTBOOT" id="quote_opt">
+        <div class="box4" id="quote_box">
+            <span style="font-size: medium;"></span>
+            <br>
+            <span style="font-size: small;"></span>
+        </div>
+    </div>
+
+
+    <div class="container_NOTBOOT" id="bottom_opt">
+        <div class="box5">Made by Hyunwoo Kim</div>
+        </div>
+    </div>
+
+    <script src="js/Login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/slot_machine.js"></script>
+</body>
+</html>

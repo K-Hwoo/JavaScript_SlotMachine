@@ -59,16 +59,17 @@ function handleClickSlotButton(event) {
         let resultPoint;
         let GamblingDividend;
 
-        if (((pickImage1 === SEVEN) && (pickImage2 === SEVEN)) || ((pickImage2 === SEVEN) && (pickImage3 === SEVEN)) || ((pickImage1 === SEVEN) && (pickImage3 === SEVEN))) {
-            resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 5);
-            localStorage.setItem("points", resultPoint);
-            showPoints.innerText = `${resultPoint}`;
-            GamblingDividend = 5;
-        } else if ((pickImage1 === SEVEN) && (pickImage2 === SEVEN) && (pickImage3 === SEVEN)) {
+        if ((pickImage1 === SEVEN) && (pickImage2 === SEVEN) && (pickImage3 === SEVEN)) {
             resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 100);
             localStorage.setItem("points", resultPoint);
             showPoints.innerText = `${resultPoint}`;
             GamblingDividend = 100;
+        } else if (((pickImage1 === SEVEN) && (pickImage2 === SEVEN)) || ((pickImage2 === SEVEN) && (pickImage3 === SEVEN)) || ((pickImage1 === SEVEN) && (pickImage3 === SEVEN))) {
+            resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 5);
+            localStorage.setItem("points", resultPoint);
+            showPoints.innerText = `${resultPoint}`;
+            GamblingDividend = 5;
+
         } else if ((pickImage1 === pickImage2) || (pickImage2 === pickImage3) || (pickImage1 === pickImage3)) {
             resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 3);
             localStorage.setItem("points", resultPoint);

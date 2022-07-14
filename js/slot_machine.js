@@ -7,7 +7,7 @@ const IMAGE1 = document.querySelector("#slot_image1");
 const IMAGE2 = document.querySelector("#slot_image2");
 const IMAGE3 = document.querySelector("#slot_image3");
 
-const images = ["IMG_1.jpg", "IMG_2.jpg", "IMG_3.jpg", "IMG_4.jpg", "IMG_5.jpg", "IMG_6.jpg", "IMG_7.jpg", "IMG_8.jpg"];
+const images = ["IMG_1.jpg", "IMG_2.jpg", "IMG_3.jpg", "IMG_4.jpg", "IMG_5.jpg", "IMG_6.jpg", "IMG_7.jpg", "IMG_8.jpg", "IMG_9.jpg"];
 
 //const bgImage = document.createElement("img");  // createElement !!
 
@@ -42,7 +42,7 @@ function handleClickSlotButton(event) {
     const checkLogin = localStorage.getItem("username");
     const points = parseInt(localStorage.getItem("points"));  
     const BetingPoint = putPoints.value;
-    const SEVEN = "IMG_8.jpg"
+    const SEVEN = "IMG_9.jpg"
 
     if (checkLogin === null) {
         alert("슬롯 머신을 작동하려면 로그인 해주세요!")

@@ -1,0 +1,139 @@
+.hidden {
+    display : none;
+}
+
+#todo-list {
+    list-style: none;
+}
+
+p {
+    font-size: 3px;
+    margin: none;
+}
+
+/* 5개 컨테이너 통일 디자인  */
+.container_NOTBOOT {
+    display: flex;
+    
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+
+    width: 80%;
+    text-align: center;
+}
+
+/* 각 컨테이너 별 별도 디자인 */
+/* 최상단 컨테이너 */
+#ceil_opt {
+    flex-wrap: nowrap;
+    width: 100%;
+    
+    justify-content: space-between;
+}
+
+/* 두번째 컨테이너(이름 시간 로고) */
+#top_opt {
+    gap: 5px 10px;
+}
+
+/* 세번째 컨테이너(슬롯 이미지) */
+#image_opt {
+    gap: 5px 10px;
+}
+
+/* 네번째 컨테이너(정보 및 ToDo) */
+#info_opt {
+    gap: 5px 10px;
+}
+
+/* 다섯번째 컨테이너(명언)*/
+#quote_opt {
+}
+
+/* 여섯번째 컨테이너(최하단)*/
+#bottom_opt {
+    width: 100%;
+    justify-content: end;
+    margin-right: 20px;
+    font-size: small;
+    font-style: italic;
+}
+
+
+/* 각 컨테이너 내 박스들 별도 디자인 */
+.box0_l {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.box0_r {
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+
+.box1 {
+    flex: 1 1 220px;
+}
+.box1 > * {
+    margin: 10px 0px;
+}
+.box1 > a > img {
+    width: 50px;
+    height: 50px;
+    margin: 3.5px 10px 0px 10px;
+}
+
+
+.box2 {
+    flex: 1 1 200px;
+}
+.box2 > img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.box3 {
+    flex: 1 1 200px;
+    height: auto;
+}
+#info_opt div:nth-of-type(1){
+    background : linear-gradient(rgba(243, 242, 233, 0.6), rgba(243, 242, 233, 0.6));
+    min-height: 150px;
+    border-radius: 5%;
+}
+#info_opt div:nth-of-type(2){
+    min-height: 150px;
+    border-radius: 5%;
+    border : 1px solid gold;
+}
+#info_opt div:nth-of-type(3){
+    background : linear-gradient(rgba(243, 242, 233, 0.6), rgba(243, 242, 233, 0.6));
+    border-radius: 5%;
+    min-height: 150px;
+}
+.box3 > h3 {
+    margin-top: 5%;
+}
+.box3 > form {
+    margin-top: 5%;
+}
+.box3 > form > button {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.box4 {
+    width: 1350px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+
+.box5{
+}

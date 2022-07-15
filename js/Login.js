@@ -32,7 +32,7 @@ function LoginSubmit(event) {
 }
 
 function paintGreetings(UserName) {
-    greeting.innerText = `Hello ${UserName}`; // 백틱 표기
+    greeting.innerText = `Hello ${UserName}!`; // 백틱 표기
     greeting.classList.remove(HIDDEN_CLASSNAME); 
 }
 

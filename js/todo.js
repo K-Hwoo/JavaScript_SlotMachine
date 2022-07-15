@@ -34,7 +34,7 @@ function showToDo (td) {
     new_li.id = td.id;
     span.innerText = td.text + " ";
     const delButton = document.createElement("button")
-    delButton.innerText = "X"
+    delButton.innerText = "del"
 
     delButton.addEventListener("click", delToDo)
 
@@ -43,7 +43,7 @@ function showToDo (td) {
     toDoList.appendChild(new_li);
 
     delButton.classList.add("btn");
-    delButton.classList.add("btn-danger");
+    delButton.classList.add("btn-outline-secondary");
     delButton.classList.add("btn-sm");
 }
 

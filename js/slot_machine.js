@@ -3,11 +3,14 @@ const showPoints = document.querySelector("#points");
 const putPoints = document.querySelector("#beting input");
 const slotButton = document.querySelector("#beting button");
 
+const showBox = document.querySelector("#showBox");
+const showBoxText = showBox.querySelector("h3");
+
 const IMAGE1 = document.querySelector("#slot_image1");
 const IMAGE2 = document.querySelector("#slot_image2");
 const IMAGE3 = document.querySelector("#slot_image3");
 
-const images = ["IMG_1.jpg", "IMG_2.jpg", "IMG_3.jpg", "IMG_4.jpg", "IMG_5.jpg", "IMG_6.jpg", "IMG_7.jpg", "IMG_8.jpg", "IMG_9.jpg"];
+const images = ["IMG_1.jpg", "IMG_2.jpg", "IMG_3.jpg", "IMG_4.jpg", "IMG_5.jpg", "IMG_6.jpg", "IMG_7.jpg", "IMG_8.jpg", "IMG_9.jpg", "IMG_10.jpg", "IMG_11.jpg"];
 
 //const bgImage = document.createElement("img");  // createElement !!
 
@@ -42,7 +45,7 @@ function handleClickSlotButton(event) {
     const checkLogin = localStorage.getItem("username");
     const points = parseInt(localStorage.getItem("points"));  
     const BetingPoint = putPoints.value;
-    const SEVEN = "IMG_9.jpg"
+    const SEVEN = "IMG_11.jpg"
 
     if (checkLogin === null) {
         alert("슬롯 머신을 작동하려면 로그인 해주세요!")
@@ -64,27 +67,31 @@ function handleClickSlotButton(event) {
             localStorage.setItem("points", resultPoint);
             showPoints.innerText = `${resultPoint}`;
             GamblingDividend = 100;
+            showBoxText.innerText = `Lucky Seven!`;
         } else if (((pickImage1 === SEVEN) && (pickImage2 === SEVEN)) || ((pickImage2 === SEVEN) && (pickImage3 === SEVEN)) || ((pickImage1 === SEVEN) && (pickImage3 === SEVEN))) {
             resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 5);
             localStorage.setItem("points", resultPoint);
             showPoints.innerText = `${resultPoint}`;
             GamblingDividend = 5;
-
+            showBoxText.innerText = `Double Seven!`;
+        } else if ((pickImage1 === pickImage2) && (pickImage2 === pickImage3)) {
+            resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 10);
+            localStorage.setItem("points", resultPoint);
+            showPoints.innerText = `${resultPoint}`;
+            GamblingDividend = 10;        
+            showBoxText.innerText = `Congratulations!`
         } else if ((pickImage1 === pickImage2) || (pickImage2 === pickImage3) || (pickImage1 === pickImage3)) {
             resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 3);
             localStorage.setItem("points", resultPoint);
             showPoints.innerText = `${resultPoint}`;
             GamblingDividend = 3;
-        } else if ((pickImage1 === pickImage2) && (pickImage2 === pickImage3)) {
-            resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 10);
-            localStorage.setItem("points", resultPoint);
-            showPoints.innerText = `${resultPoint}`;
-            GamblingDividend = 10;
+            showBoxText.innerText = `winning!`
         } else {
             resultPoint = pointsAfterSlot;
             localStorage.setItem("points", resultPoint);
             showPoints.innerText = `${resultPoint}`;
             GamblingDividend = "꽝";
+            showBoxText.innerText = `Bang :(`
         }
 
         console.log(`베팅한 포인트 : ${BetingPoint}`);
@@ -94,6 +101,27 @@ function handleClickSlotButton(event) {
     }
 }
 
+let num1 = 0;
+let num2 = 1;
+let num3 = 2;
+
+function gradientSlotResult() {
+    const colorList = ["#fbfcb9be", "#ffcdf3aa", "#65d3ffaa"]
+    if(num1 > 2) {
+        num1 = 0;
+    }
+    if(num2 > 2) {
+        num2 = 0;
+    }
+    if(num3 > 2) {
+        num3 = 0;
+    }
+    showBox.style.backgroundImage = `linear-gradient(#000000, #000000), linear-gradient(to right, ${colorList[num1]}, ${colorList[num2]}, ${colorList[num3]})`;
+    num1 += 1;
+    num2 += 1;
+    num3 += 1;
+}
 
 FisrtShowRandomImage()
 slotButton.addEventListener("click", handleClickSlotButton);
+setInterval(gradientSlotResult, 300);

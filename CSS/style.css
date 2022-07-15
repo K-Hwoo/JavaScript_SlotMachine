@@ -4,11 +4,38 @@
 
 #todo-list {
     list-style: none;
+    padding: 8px 20px 0px 20px;
+}
+
+li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+li > span {
+    margin-right: 5px;
 }
 
 p {
-    font-size: 1em;
-    margin: none;
+    font-style: italic;
+    font-size: 0.8em;
+    margin : 3px 0px;
+}
+
+.form_style {
+    width: 200px; 
+    margin: 0px auto; 
+    border: none; 
+    border-bottom: 1px solid antiquewhite; 
+    background: transparent; 
+    text-align: center; 
+    color: snow;
+}
+
+#beting > input {
+    border: 8px double forestgreen;
+    border-radius: 25px;
+    width: 180px;
+    height: 35px;
 }
 
 /* 5개 컨테이너 통일 디자인  */
@@ -57,7 +84,7 @@ p {
 #bottom_opt {
     width: 100%;
     justify-content: end;
-    margin-right: 20px;
+    margin-right: 1%;
     font-size: small;
     font-style: italic;
 }
@@ -65,13 +92,14 @@ p {
 
 /* 각 컨테이너 내 박스들 별도 디자인 */
 .box0_l {
-    margin-top: 5px;
-    margin-left: 20px;
+    margin-top: 0.5%;
+    margin-left: 0.5%;
 }
 .box0_r {
-    margin-top: 5px;
-    margin-right: 20px;
+    margin-top: 0.5%;
+    margin-right: 0.5%;
 }
+
 
 
 .box1 {
@@ -80,48 +108,45 @@ p {
 .box1 > * {
     margin: 10px 0px;
 }
-.box1 > a > img {
-    width: 50px;
-    height: 50px;
-    margin: 3.5px 10px 0px 10px;
+.box1:nth-of-type(3) {
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#000000, #000000), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+    background-clip: content-box, border-box;
+    background-origin: border-box;
 }
+
 
 
 .box2 {
     flex: 1 1 200px;
+    height: auto;
 }
 .box2 > img {
     max-width: 100%;
-    height: auto;
 }
+
 
 
 
 .box3 {
     flex: 1 1 200px;
     height: auto;
-}
-#info_opt div:nth-of-type(1){
-    background : linear-gradient(rgba(243, 242, 233, 0.6), rgba(243, 242, 233, 0.6));
+    
     min-height: 150px;
-    border-radius: 5%;
-}
-#info_opt div:nth-of-type(2){
-    min-height: 150px;
-    border-radius: 5%;
-    border : 1px solid gold;
-}
-#info_opt div:nth-of-type(3){
-    background : linear-gradient(rgba(243, 242, 233, 0.6), rgba(243, 242, 233, 0.6));
-    border-radius: 5%;
-    min-height: 150px;
+    border: 1px solid #444444;
+    border-radius: 20px;
+    background-image: linear-gradient(rgba(68, 68, 68, 0.8), rgba(68, 68, 68, 0.8));
 }
 .box3 > h3 {
     margin-top: 5%;
 }
-.box3 > form {
-    margin-top: 5%;
+.box3:nth-of-type(2) > form {
+    margin-top: 3%;
+    text-align: center;
 }
+
 .box3 > form > button {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -137,6 +162,8 @@ p {
 
 .box5{
 }
+
+
 
 @media screen and (min-width : 320px) and (max-width : 450px) {
     .box1, .box2, .box3, .box4, .box5 {

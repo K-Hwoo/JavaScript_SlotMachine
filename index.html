@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <title>App</title>
 </head>
-<body>
+<body> 
     <div class="container_NOTBOOT" id="ceil_opt">
         <span class="box0_l" style="font-size: 25px;"><b>Vanilla Slot Machine</b></span>
         <div class="box0_r" id="weather">
@@ -22,9 +22,8 @@
     <div class = "container_NOTBOOT" id="top_opt">
         <div class="box1">
             <form class="hidden" id="login-form">    <!-- HTML의 도움을 받기위해 input은 form 안에 -->
-                <input required maxlength = "15" type="text" placeholder="What is your name?">
-                <button>Log In</button>
-            </form>
+                <input class="form_style" required maxlength = "15" type="text" placeholder="What is your name?">
+            </form> 
             <h3 class="hidden" id="greeting"></h3>
         </div>
 
@@ -32,10 +31,8 @@
             <h2 id="clock"></h2>
         </div>
 
-        <div class="box1">
-            <a href="www.google.com"><img src="img/google.png"></a>
-            <a href="www.naver.com"><img src="img/naver.png"></a>
-            <a href="www.youtube.com"><img src="img/youtube.png"></a>
+        <div class="box1" id="showBox">
+            <h3>버튼을 눌러 시작</h3>
         </div>
     </div>
     
@@ -57,26 +54,27 @@
 
     <div class = "container_NOTBOOT" id="info_opt">
         <div class="box3">
-            <h3>보유 포인트</h3>
+            <h3>[보유 포인트]</h3>
             <br>
             <h4 id="points"></h4>
         </div>
 
         <div class="box3">
             <form id="beting">
-                <input type="number" min="0" step="10" placeholder="베팅 포인트를 입력">
+                <input type="number" min="0" step="10" placeholder="     베팅 포인트를 입력">
                 <br>
                 <button class=" btn btn-success btn-lg">슬롯!</button>
             </form>
             <p>같은 이미지가 2개 나오면 3배</p>
             <p>모두 같은 이미지가 나오면 10배</p>
             <p>7이 2개 나오면 5배</p>
-            <p>! 777은 100배 !</p>
+            <p>!! 777은 100배 !!</p>
         </div>
 
         <div class="box3" id="memo">
+            <h4>⦿</h4>
             <form id="todo-form">
-                <input type="text" placeholder="Write a To Do and Press">
+                <input required input class="form_style"  type="text" placeholder=" Write a To Do and Press">
             </form>
             <ul id="todo-list">
             </ul>

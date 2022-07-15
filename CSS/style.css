@@ -40,6 +40,7 @@ p {
     border-radius: 25px;
     width: 180px;
     height: 35px;
+    text-align: center;
 }
 
 /* 5개 컨테이너 통일 디자인  */
@@ -151,9 +152,6 @@ p {
 }
 .box3:nth-of-type(2) > form {
     margin-top: 3%;
-    text-align: center;
-}
-.box3:nth-of-type(2) > form > input {
     text-align: center;
 }
 .box3 > form > button {

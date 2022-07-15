@@ -47,6 +47,10 @@ function handleClickSlotButton(event) {
     const BetingPoint = putPoints.value;
     const SEVEN = "IMG_11.jpg"
 
+    let pointsAfterSlot = points - parseInt(BetingPoint);
+    let resultPoint;
+    let GamblingDividend;
+
     if (checkLogin === null) {
         alert("슬롯 머신을 작동하려면 로그인 해주세요!")
     } else if (BetingPoint === "") {
@@ -57,10 +61,6 @@ function handleClickSlotButton(event) {
         IMAGE1.src = `img/${pickImage1}`
         IMAGE2.src = `img/${pickImage2}`
         IMAGE3.src = `img/${pickImage3}`
-
-        let pointsAfterSlot = points - parseInt(BetingPoint);
-        let resultPoint;
-        let GamblingDividend;
 
         if ((pickImage1 === SEVEN) && (pickImage2 === SEVEN) && (pickImage3 === SEVEN)) {
             resultPoint = pointsAfterSlot + (parseInt(BetingPoint) * 100);

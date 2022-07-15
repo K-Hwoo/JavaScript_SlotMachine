@@ -115,7 +115,7 @@ p {
 }
 .box1:nth-of-type(3) {
     height: auto;
-    border: 2px solid transparent;
+    border: 3px solid transparent;
     border-radius: 20px;
     background-image: linear-gradient(#000000, #000000), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
     background-clip: content-box, border-box;
